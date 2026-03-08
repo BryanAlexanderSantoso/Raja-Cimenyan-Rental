@@ -28,11 +28,13 @@ jobs:
           VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
           VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
 
-      - name: 🚀 Deploy to cPanel via FTP
+      - name: 🚀 Deploy to cPanel via SFTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+          protocol: sftp
+          port: 22
           local-dir: ./dist/
-          server-dir: /public_html/rental/  # Pakai slash di awal (absolute path di FTP)
+          server-dir: /public_html/rental/
