@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /sopir/
+Disallow: /login
+
+Sitemap: https://rajacimenyanrental.com/sitemap.xml
