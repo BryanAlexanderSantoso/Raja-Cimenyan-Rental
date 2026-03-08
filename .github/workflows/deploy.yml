@@ -35,5 +35,5 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
-          server-dir: ./public_html/  # Sesuaikan jika path di cPanel berbeda
+          server-dir: ./public_html/rental/  # Sesuaikan dengan Document Root di cPanel
           delete-destination: false # Set true jika ingin menghapus file lama yang tidak ada di build baru
