@@ -38,7 +38,7 @@ export default function SopirDashboard() {
             }
 
             setDriverInfo(driverData);
-
+// perubahan
             // Fetch driver trips
             const { data: tripsData } = await supabase
                 .from('trips')
